@@ -23,7 +23,7 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      student: { twitter: "Snowden" },
+      student: {},
     };
   },
   created: function () {
