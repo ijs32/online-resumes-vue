@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <div v-for="student in students" :key="student.id">
-      <h1>Resume: {{ student.resume }}</h1>
+      <h1>First name: {{ student.first_name }}</h1>
+      <router-link v-bind:to="`/student/${student.id}`">More Info</router-link>
     </div>
   </div>
 </template>
