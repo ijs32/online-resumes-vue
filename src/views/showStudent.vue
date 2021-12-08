@@ -13,6 +13,10 @@
     <h3>Website: {{ student.website }}</h3>
     <h3>Online resume: {{ student.online_resume }}</h3>
     <h3>photo: {{ student.photo }}</h3>
+    <h3>Skills:</h3>
+    <div v-for="skill in skills" :key="skill.id">
+      <h4>{{ skill.skill }}</h4>
+    </div>
     <router-link v-bind:to="`/`">Home</router-link>
   </div>
 </template>
@@ -24,11 +28,14 @@ export default {
   data: function () {
     return {
       student: {},
+      skills: [],
     };
   },
   created: function () {
     axios.get("/students/" + this.$route.params.id).then((response) => {
       this.student = response.data;
+      this.skills = response.data.skills;
+      console.log(response.data);
     });
   },
   methods: {},
