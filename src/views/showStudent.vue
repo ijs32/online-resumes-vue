@@ -6,7 +6,10 @@
     <h3>Phone number: {{ student.phone_number }}</h3>
     <h3>Short bio: {{ student.short_bio }}</h3>
     <h3>Linkedin: {{ student.linkedin }}</h3>
-    <h3>Twitter handle: {{ student.twitter }}</h3>
+    <h3>
+      Twitter handle:
+      <a v-bind:href="`https://twitter.com/${student.twitter}`">{{ student.twitter }}</a>
+    </h3>
     <h3>Website: {{ student.website }}</h3>
     <h3>Online resume: {{ student.online_resume }}</h3>
     <h3>photo: {{ student.photo }}</h3>
@@ -20,7 +23,7 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      student: {},
+      student: { twitter: "Snowden" },
     };
   },
   created: function () {
