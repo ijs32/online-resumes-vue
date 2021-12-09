@@ -1,9 +1,14 @@
 <template>
   <div class="home">
-    <div v-for="student in students" :key="student.id">
-      <h1>First name: {{ student.first_name }}</h1>
-      <router-link v-bind:to="`/student/${student.id}`">More Info</router-link>
-    </div>
+    <section id="hero">
+      <div class="hero-container">
+        <h1>Online Resume List</h1>
+        <div v-for="student in students" :key="student.id">
+          <h3>{{ student.first_name }}</h3>
+          <router-link v-bind:to="`/student/${student.id}`">More Info</router-link>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
