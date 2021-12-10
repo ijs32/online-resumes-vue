@@ -1,8 +1,24 @@
 <template>
 <div>
+  <!-- <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>End My Portfolio Section -->
     <section id="resume" class="resume">
       <div class="container">
-
+      <img class="oval" v-bind:src="student.photo">
         <div class="section-title">
           <span>Resume</span>
           <h2>Resume</h2>
@@ -14,22 +30,17 @@
             <div class="resume-item pb-0">
               <h4>{{student.first_name + " " + student.last_name}}</h4>
               <ul>
-                <p>{{student.short_bio}}</p>
+                <p><em>{{student.short_bio}}</em></p>
               </ul>
               <p>
               <ul>
-                <li>photo: {{ student.photo }}</li>
+                <li>Check out my <a :href="`${student.online_resume}`">resume!</a></li>
+                <li>LinkedIn: <a :href="`${student.linkedin}`">{{ student.linkedin }}</a></li>
+                <li>Website: <a :href="`${student.website}`">{{ student.website }}</a></li>
+                <li>GitHub: <a :href="`${student.github}`">{{ student.github }}</a></li>
+                <li>Twitter Handle: <a v-bind:href="`https://twitter.com/${student.twitter}`">{{ student.twitter }}</a></li>
+                <li>Email: <a :href="`${student.email}`">{{ student.email }}</a></li>
                 <li>Phone Number: {{ student.phone_number }}</li>
-                <li>Email: {{ student.email }}</li>
-                <li>Online resume: {{ student.online_resume }}</li>
-                <li>LinkedIn: {{ student.linkedin }}</li>
-                <li>Website: {{ student.website }}</li>
-                <li>GitHub: {{ student.github }}</li>
-                <li>
-                  <p>Twitter Handle:
-                    <a v-bind:href="`https://twitter.com/${student.twitter}`">{{ student.twitter }}</a>
-                    </p>
-                </li>
               </ul>
               </p>
             </div>
@@ -103,6 +114,18 @@
   </div>
 </template>
 
+<style>
+  .oval {
+  width: 25%;
+  /* height: 180px;
+  background: #a84909; */
+  border-radius: 50%;
+  display: block;
+  /* text-align: center; */
+  margin-left: auto;
+  margin-right: auto;
+  }
+</style>
 <script>
 import axios from "axios";
 
