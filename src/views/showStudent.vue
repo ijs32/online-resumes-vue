@@ -1,11 +1,12 @@
 <template>
+<div>
     <section id="resume" class="resume">
       <div class="container">
 
         <div class="section-title">
           <span>Resume</span>
           <h2>Resume</h2>
-          <h4> <a v-bind:href="`/student/${student.id}/capstone`">My Projects</a> </h4>
+          <h4> <a v-bind:href="`/student/capstone`">My Projects</a> </h4>
         </div>
 
         <div class="row">
@@ -70,6 +71,37 @@
     </div>
   </div> 
     </section>
+      <section id="services" class="services">
+    <div class="container">
+      <div class="section-title">
+        <span>My Services</span>
+        <h2>My Services</h2>
+        <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+      </div>
+    
+
+      <div v-for="capstone in capstones" :key="capstone" class="row">
+       <!-- d-flex align-items-stretch mb-5 mb-lg-0 -->
+        <div  class="col">
+           <!-- <div v-for="capstone in capstones" :key="capstone"> -->
+          <div class="icon-box">
+            <div class="icon"><i class="bx bxl-dribbble"></i>
+            </div>
+              <h4 class="title"><a href="">{{ capstone.name}}</a></h4>
+              <p class="description">
+                {{ capstone.description}}
+              </p>
+              <!-- closes titles -->
+            </div>
+          <!-- closes column -->
+          </div>
+          <!-- closes v-for -->
+        </div>
+        <!-- closes row -->
+      </div> 
+      <!-- </div> -->
+    </section>
+  </div>
 </template>
 
 <script>
