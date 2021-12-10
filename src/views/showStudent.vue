@@ -6,7 +6,6 @@
         <div class="section-title">
           <span>Resume</span>
           <h2>Resume</h2>
-          <h4> <a v-bind:href="`/student/capstone`">My Projects</a> </h4>
         </div>
 
         <div class="row">
@@ -74,8 +73,8 @@
       <section id="services" class="services">
     <div class="container">
       <div class="section-title">
-        <span>My Services</span>
-        <h2>My Services</h2>
+        <span>My Projects</span>
+        <h2>My Projects</h2>
         <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
       </div>
     
@@ -87,7 +86,7 @@
           <div class="icon-box">
             <div class="icon"><i class="bx bxl-dribbble"></i>
             </div>
-              <h4 class="title"><a href="">{{ capstone.name}}</a></h4>
+              <h4 class="title"><a :href="`//${capstone.URL}`" target="_blank">{{ capstone.name }}</a></h4>
               <p class="description">
                 {{ capstone.description}}
               </p>
