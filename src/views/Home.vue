@@ -8,7 +8,7 @@
             <div class="col-lg-12">
               <!-- <div v-for="capstone in capstones" :key="capstone"> -->
               <div class="icon-box">
-                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                <p></p>
                 <h3 style="color: white">
                   <router-link v-bind:to="`/student/${student.id}`">
                     {{ student.first_name }} {{ student.last_name }}
