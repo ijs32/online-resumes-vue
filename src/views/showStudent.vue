@@ -33,15 +33,15 @@
                 <p><em>{{student.short_bio}}</em></p>
               </ul>
               <p>
-              <ul>
-                <li>Check out my <a :href="`${student.online_resume}`">resume!</a></li>
-                <li>LinkedIn: <a :href="`${student.linkedin}`">{{ student.linkedin }}</a></li>
-                <li>Website: <a :href="`${student.website}`">{{ student.website }}</a></li>
-                <li>GitHub: <a :href="`${student.github}`">{{ student.github }}</a></li>
-                <li>Twitter Handle: <a v-bind:href="`https://twitter.com/${student.twitter}`">{{ student.twitter }}</a></li>
-                <li>Email: <a :href="`${student.email}`">{{ student.email }}</a></li>
-                <li>Phone Number: {{ student.phone_number }}</li>
-              </ul>
+                <ul>
+                  <li>Check out my <a :href="`${student.online_resume}`">resume!</a></li>
+                  <li>LinkedIn: <a :href="`${student.linkedin}`">{{ student.linkedin }}</a></li>
+                  <li>Website: <a :href="`${student.website}`">{{ student.website }}</a></li>
+                  <li>GitHub: <a :href="`${student.github}`">{{ student.github }}</a></li>
+                  <li>Twitter Handle: <a v-bind:href="`https://twitter.com/${student.twitter}`">{{ student.twitter }}</a></li>
+                  <li>Email: <a :href="`${student.email}`">{{ student.email }}</a></li>
+                  <li>Phone Number: {{ student.phone_number }}</li>
+                </ul>
               </p>
             </div>
 
@@ -86,7 +86,6 @@
       <div class="section-title">
         <span>My Projects</span>
         <h2>My Projects</h2>
-        <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
       </div>
     
 
