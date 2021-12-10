@@ -1,11 +1,15 @@
 <template>
+<div>
     <section id="resume" class="resume">
       <div class="container">
 
         <div class="section-title">
           <span>Resume</span>
           <h2>Resume</h2>
-          <h4> <a v-bind:href="`/student/${student.id}/capstone`">My Projects</a> </h4>
+          <p>Go to my Projects </p>
+          <a href="#services" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
+          <p></p>
+          <img v-bind:src="student.photo"> 
         </div>
 
         <div class="row">
@@ -70,6 +74,26 @@
     </div>
   </div> 
     </section>
+    <section id="services" class="services">
+    <div class="container">
+      <div class="section-title">
+        <span>My Projects</span>
+        <h2>My Projects</h2>
+        <p>Take a look at all of my projects!</p>
+      </div>
+
+<div v-for="capstone in capstones" :key="capstone" class="row">
+    <div class="col"> 
+           <div class="icon-box">
+            <img v-bind:src="capstone.screenshot">
+            <h4>{{capstone.name}}</h4>
+            <p>{{capstone.description}}</p>
+          </div>
+          </div>
+        </div>
+      </div>
+  </section> 
+  </div>
 </template>
 
 <script>

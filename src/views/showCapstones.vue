@@ -1,5 +1,4 @@
-<template>
-  <section id="services" class="services">
+<!-- <section id="services" class="services">
     <div class="container">
       <div class="section-title">
         <span>My Services</span>
@@ -52,25 +51,4 @@
         </div>
       </div>
     </div>
-  </section>
-</template>
-<script>
-import axios from "axios";
-
-export default {
-  data: function () {
-    return {
-      student: {},
-      capstones: [],
-    };
-  },
-  created: function () {
-    axios.get("/students/" + this.$route.params.id).then((response) => {
-      this.student = response.data;
-      this.capstones = response.data.capstones;
-      console.log(response.data);
-    });
-  },
-  methods: {},
-};
-</script>
+  </section> -->
